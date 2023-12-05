@@ -57,7 +57,10 @@ export const UserItem = () => {
             </div>
           </div>
         </div>
+        @{user?.username}
         <DropdownMenuSeparator />
+     
+    
         <DropdownMenuItem asChild className="w-full cursor-pointer text-muted-foreground">
           <SignOutButton>
             Log out
