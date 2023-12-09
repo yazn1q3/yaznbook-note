@@ -17,6 +17,7 @@ import {
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 interface MenuProps {
   documentId: Id<"documents">;
@@ -60,8 +61,10 @@ export const Menu = ({
           Delete
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <div className="text-xs text-muted-foreground p-2">
-          Last edited by: {user?.fullName}
+        <div className="text-xs text-muted-foreground p-2 flex items-center">
+          Last edited by: {user?.fullName} <Avatar className="h-5 w-5 m-1">
+              <AvatarImage src={user?.imageUrl} />
+            </Avatar>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

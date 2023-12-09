@@ -24,6 +24,15 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { useMediaQuery } from "usehooks-ts";
+
 
 interface ItemProps {
   id?: Id<"documents">;
@@ -31,6 +40,7 @@ interface ItemProps {
   active?: boolean;
   expanded?: boolean;
   isSearch?: boolean;
+  isNew?:boolean;
   level?: number;
   onExpand?: () => void;
   label: string;
@@ -40,6 +50,7 @@ interface ItemProps {
 
 export const Item = ({
   id,
+  isNew,
   label,
   onClick,
   icon: Icon,
@@ -54,6 +65,7 @@ export const Item = ({
   const router = useRouter();
   const create = useMutation(api.documents.create);
   const archive = useMutation(api.documents.archive);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const onArchive = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -100,6 +112,9 @@ export const Item = ({
   const ChevronIcon = expanded ? ChevronDown : ChevronRight;
 
   return (
+    <TooltipProvider>
+       <Tooltip>
+       <TooltipTrigger asChild>
     <div
       onClick={onClick}
       role="button"
@@ -139,6 +154,12 @@ export const Item = ({
           <span className="text-xs">⌘</span>K
         </kbd>
       )}
+      {isNew && (
+        <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded   px-1.5 font-mono text-[10px] font-medium text-muted-foreground ">
+        <Badge>Soon</Badge>
+      </kbd>
+      )
+      }
       {!!id && (
         <div className="ml-auto flex items-center gap-x-2">
           <DropdownMenu>
@@ -179,6 +200,12 @@ export const Item = ({
         </div>
       )}
     </div>
+    </TooltipTrigger>
+    <TooltipContent className={`${isMobile && "hidden"}`} >
+          <p>{label}</p>
+        </TooltipContent>
+    </Tooltip>
+    </TooltipProvider>
   )
 }
 

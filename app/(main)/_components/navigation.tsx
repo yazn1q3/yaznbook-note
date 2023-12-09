@@ -8,6 +8,8 @@ import {
   PlusCircle,
   Search,
   Settings,
+
+  StarsIcon,
   Trash
 } from "lucide-react";
 import { useParams, usePathname, useRouter } from "next/navigation";
@@ -31,6 +33,7 @@ import { Item } from "./item";
 import { DocumentList } from "./document-list";
 import { TrashBox } from "./trash-box";
 import { Navbar } from "./navbar";
+import Link from "next/link";
 
 export const Navigation = () => {
   const router = useRouter();
@@ -171,6 +174,15 @@ const handleHome = () => {
             isSearch
             onClick={search.onOpen}
           />
+          <hr className=" m-1" />
+          <Link href="/ai" >
+           <Item
+            label="Yaznbook Ai"
+           icon={StarsIcon}
+           isNew
+           
+          />
+          </Link>
           <Item
             label="Settings"
             icon={Settings}
