@@ -12,7 +12,7 @@ const AiPage = () => {
   const { user } = useUser();
   return (
     <div>
-      <div className="flex items-center" >
+      <div className="flex items-center  justify-center" >
    <img src="channels4_profile.jpg" className="w-[35px] h-[35px] rounded-[50px] m-1" />   <Label className="m-5 text-[20px]" >Yaznbook Ai</Label>
    </div>
    <main className="h-[50vh] flex items-center justify-center" >
