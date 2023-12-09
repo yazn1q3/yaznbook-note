@@ -30,7 +30,7 @@ const AiPage = () => {
               className="p-2 w-50"
           
             >
-            successfully , to add {user?.firstName}'s Whitelist!
+            successfully , to add {user?.firstName} Whitelist!
             </PopoverContent>
           </Popover>
    
