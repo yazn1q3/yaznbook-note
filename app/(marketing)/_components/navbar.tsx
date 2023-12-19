@@ -40,6 +40,7 @@ export const Navbar = () => {
             </SignInButton>
           </>
         )}
+    
         {isAuthenticated && !isLoading && (
           <>
             <Button variant="ghost" size="sm" asChild>

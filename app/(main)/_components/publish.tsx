@@ -133,7 +133,7 @@ export const Publish = ({
               Publish this note
             </p>
             <span className="text-xs text-muted-foreground mb-4">
-              Share your work with others.
+              Share your work with others and Freinds.
             </span>
             <Button
               disabled={isSubmitting}

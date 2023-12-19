@@ -1,4 +1,5 @@
 "use client";
+import { Analytics } from '@vercel/analytics/react';
 
 import { useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
@@ -33,6 +34,7 @@ const MainLayout = ({
       <main className="flex-1 h-full overflow-y-auto">
         <SearchCommand />
         {children}
+        <Analytics />
       </main>
     </div>
    );

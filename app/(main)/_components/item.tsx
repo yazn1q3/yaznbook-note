@@ -33,7 +33,6 @@ import {
 } from "@/components/ui/tooltip"
 import { useMediaQuery } from "usehooks-ts";
 
-
 interface ItemProps {
   id?: Id<"documents">;
   documentIcon?: string;
@@ -55,6 +54,7 @@ export const Item = ({
   onClick,
   icon: Icon,
   active,
+
   documentIcon,
   isSearch,
   level = 0,
@@ -123,7 +123,9 @@ export const Item = ({
       }}
       className={cn(
         "group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-primary/5 flex items-center text-muted-foreground font-medium",
-        active && "bg-primary/5 text-primary"
+        active && "bg-primary/5 text-primary",
+     
+        
       )}
     >
       {!!id && (
@@ -156,7 +158,7 @@ export const Item = ({
       )}
       {isNew && (
         <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded   px-1.5 font-mono text-[10px] font-medium text-muted-foreground ">
-        <Badge>Soon</Badge>
+        <Badge className="" >New</Badge>
       </kbd>
       )
       }

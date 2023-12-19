@@ -1,8 +1,12 @@
 "use client";
 
 import {
+  Camera,
+  CameraOff,
   ChevronsLeft,
+  Cloud,
   HomeIcon,
+  LucideVideo,
   MenuIcon,
   Plus,
   PlusCircle,
@@ -175,12 +179,12 @@ const handleHome = () => {
             onClick={search.onOpen}
           />
           <hr className=" m-1" />
-          <Link href="/ai" >
-           <Item
-            label="Yaznbook Ai"
-           icon={StarsIcon}
-           isNew
-           
+          <Link href="/cloud" >
+          <Item 
+          
+          isNew
+          label="Cloud Yaznbook"
+          icon={Cloud}
           />
           </Link>
           <Item
@@ -227,6 +231,7 @@ const handleHome = () => {
           isMobile && "left-0 w-full"
         )}
       >
+        
         {!!params.documentId ? (
           <Navbar
             isCollapsed={isCollapsed}

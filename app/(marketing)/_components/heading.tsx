@@ -13,11 +13,11 @@ export const Heading = () => {
 
   return (
     <div className="max-w-3xl space-y-4">
-      <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
-        Your Ideas, Documents, & Plans. Unified. Welcome to <span className="underline">Yaznbook</span>
+      <h1 className="text-3xl sm:text-5xl md:text-5xl font-bold">
+        Your Ideas, Documents, & Plans. Meets. Unified. 
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium">
-      Yaznbook is the connected workspace where <br />
+      Yaznbook is the connected workspace and Meets where <br />
         better, faster work happens.
       </h3>
       {isLoading && (

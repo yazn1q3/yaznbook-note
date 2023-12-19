@@ -45,9 +45,9 @@ const DocumentsPage = () => {
       <h2 className="text-lg font-medium">
         Welcome to {user?.firstName}&apos;s Yaznbook
       </h2>
-      <Button onClick={onCreate}>
+      <Button className=" rounded-[10px]"  onClick={onCreate}>
         <PlusCircle className="h-4 w-4 mr-2" />
-        Create a note
+        Create a Note
       </Button>
     </div>
    );

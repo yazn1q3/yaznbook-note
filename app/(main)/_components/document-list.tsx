@@ -14,11 +14,13 @@ import { Item } from "./item";
 interface DocumentListProps {
   parentDocumentId?: Id<"documents">;
   level?: number;
+  crah?: boolean;
   data?: Doc<"documents">[];
 }
 
 export const DocumentList = ({
   parentDocumentId,
+crah,
   level = 0
 }: DocumentListProps) => {
   const params = useParams();
@@ -63,14 +65,17 @@ export const DocumentList = ({
         className={cn(
           "hidden text-sm font-medium text-muted-foreground/80",
           expanded && "last:block",
+          crah && "rounded-[10px]",
+
           level === 0 && "hidden"
         )}
       >
         No pages inside
       </p>
       {documents.map((document) => (
-        <div key={document._id}>
+        <div key={document._id} >
           <Item
+          
             id={document._id}
             onClick={() => onRedirect(document._id)}
             label={document.title}
@@ -84,6 +89,7 @@ export const DocumentList = ({
           {expanded[document._id] && (
             <DocumentList
               parentDocumentId={document._id}
+              
               level={level + 1}
             />
           )}
