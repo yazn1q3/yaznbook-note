@@ -179,12 +179,12 @@ const handleHome = () => {
             onClick={search.onOpen}
           />
           <hr className=" m-1" />
-          <Link href="/cloud" >
+          <Link href="/ai" >
           <Item 
           
           isNew
-          label="Cloud Yaznbook"
-          icon={Cloud}
+          label="Yaznbook Ai"
+          icon={StarsIcon}
           />
           </Link>
           <Item
