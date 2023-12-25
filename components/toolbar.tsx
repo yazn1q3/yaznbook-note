@@ -1,7 +1,7 @@
 "use client";
 
 import { ElementRef, useRef, useState } from "react";
-import { ImageIcon, Smile, X } from "lucide-react";
+import { Globe, ImageIcon, Smile, X } from "lucide-react";
 import { useMutation } from "convex/react";
 import TextareaAutosize from "react-textarea-autosize";
 
@@ -21,6 +21,7 @@ export const Toolbar = ({
   initialData,
   preview
 }: ToolbarProps) => {
+  
   const inputRef = useRef<ElementRef<"textarea">>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(initialData.title);
@@ -92,7 +93,7 @@ export const Toolbar = ({
         </div>
       )}
       {!!initialData.icon && preview && (
-        <p className="text-5xl pt-6">
+        <p className="text-6xl pt-6">
           {initialData.icon}
         </p>
       )}
@@ -121,6 +122,7 @@ export const Toolbar = ({
           </Button>
         )}
       </div>
+    
       {isEditing && !preview ? (
         <TextareaAutosize
           ref={inputRef}
@@ -128,12 +130,12 @@ export const Toolbar = ({
           onKeyDown={onKeyDown}
           value={value}
           onChange={(e) => onInput(e.target.value)}
-          className="text-4xl bg-transparent font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF] resize-none"
+          className="text-5xl bg-transparent font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF] resize-none"
         />
       ) : (
         <div
           onClick={enableInput}
-          className="pb-[11.5px] text-4xl font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF]"
+          className="pb-[11.5px] text-5xl font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF]"
         >
           {initialData.title}
         </div>

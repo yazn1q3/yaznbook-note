@@ -87,3 +87,4 @@ Title.Skeleton = function TitleSkeleton() {
     <Skeleton className="h-9 w-20 rounded-md" />
   );
 };
+

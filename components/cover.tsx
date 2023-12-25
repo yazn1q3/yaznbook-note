@@ -18,6 +18,9 @@ interface CoverImageProps {
   preview?: boolean;
 }
 
+ 
+
+
 export const Cover = ({
   url,
   preview,

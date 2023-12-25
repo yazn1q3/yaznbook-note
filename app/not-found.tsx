@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         src="/error.png"
         height="300"
         width="300"
-        alt="Errorb 404"
+        alt="Error 404"
         className="dark:hidden"
       />
       <Image
@@ -24,10 +24,10 @@ const NotFoundPage = () => {
         className="hidden dark:block"
       />
       <h2 className="text-xl font-medium">
-        Something went wrong!
+        This Url it's not Found
       </h2>
       <Button asChild>
-        <Link href="/documents">
+        <Link href="/">
           Go back
         </Link>
       </Button>

@@ -35,7 +35,7 @@ const MainLayout = ({
         <SearchCommand />
         {children}
         <Analytics />
-      </main>
+      </main> 
     </div>
    );
 }

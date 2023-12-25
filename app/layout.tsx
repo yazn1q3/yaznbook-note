@@ -13,12 +13,17 @@ import { EdgeStoreProvider } from '@/lib/edgestore'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Yaznbook',
+  title: 'Yaznbook - Make Notes and Doucments',
   description: 'Yaznbook is Note App good can build Life Good',
 icons:{
   icon: [
     {
       media: "(prefers-color-scheme: light)",
+      url: "/channels4_profile.jpg",
+      href: "/channels4_profile.jpg",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
       url: "/channels4_profile.jpg",
       href: "/channels4_profile.jpg",
     }

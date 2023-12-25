@@ -12,7 +12,7 @@ const Error = () => {
         src="/error.png"
         height="300"
         width="300"
-        alt="Errorb 404"
+        alt="Error 404"
         className="dark:hidden"
       />
       <Image
