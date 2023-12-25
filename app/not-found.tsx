@@ -24,7 +24,7 @@ const NotFoundPage = () => {
         className="hidden dark:block"
       />
       <h2 className="text-xl font-medium">
-        This Url it's not Found
+        This Url it&apos;s not Found
       </h2>
       <Button asChild>
         <Link href="/">
