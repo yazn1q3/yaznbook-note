@@ -7,7 +7,9 @@ export const Heroes = () => {
 
       
 <br />
-      <Label className="text-[18px]">Make Note && Doucments with Ai <Badge> Coming Soon...</Badge></Label>
+      <Label className="text-[18px]">Make Note && Doucments with Ai <Badge>New && Beta</Badge></Label>
+<br />
+<img src="f.png" className="w-[100%] rounded-[14px] h-[13em]" />
 
     </div>
   )

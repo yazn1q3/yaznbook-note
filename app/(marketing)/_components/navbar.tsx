@@ -11,6 +11,7 @@ import { Spinner } from "@/components/spinner";
 import { cn } from "@/lib/utils";
 
 import { Logo } from "./logo";
+import { useState } from "react";
 
 export const Navbar = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -28,8 +29,11 @@ export const Navbar = () => {
         )}
         {!isAuthenticated && !isLoading && (
           <>
+          <Button variant="ghost">
+            Join us
+          </Button>
             <SignInButton mode="modal">
-              <Button variant="ghost" size="sm">
+              <Button  size="sm">
                 Log in
               </Button>
             </SignInButton>

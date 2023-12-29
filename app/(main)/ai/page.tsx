@@ -1,7 +1,6 @@
 "use client";
 
 
-import { DocumentList } from "../_components/document-list";
 import Navbere from "../_components/navbere";
 
 
@@ -15,7 +14,7 @@ const AiPage = ({}) => {
     />
 </div>
 <div className="flex items-center justify-center" >
-  Coming soon ...
+  It&apos;s Coming update tomorow
 </div>
      </>
   )
