@@ -59,7 +59,7 @@ export const Footer =  () => {
           <br />
           2- Yaznbook Notes from Yb or ts (User)
           <br />
-          3- Yaznbook or Yb i'll anyday or tomorow it auto update 
+          3- Yaznbook or Yb i&apos;ll anyday or tomorow it auto update 
           <br />
           4- Yaznbook have right all Stuff apps from Notes
      
