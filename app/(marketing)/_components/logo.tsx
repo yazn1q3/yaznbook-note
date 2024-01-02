@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const font = Poppins({
     subsets: ["latin"],
@@ -10,6 +11,7 @@ const font = Poppins({
   export const Logo = () => {
     return (
       <div className="hidden md:flex items-center gap-x-2">
+    <Link href="/">
         <Image
           src="/channels4_profile.jpg"
           height="35"
@@ -19,6 +21,8 @@ const font = Poppins({
           style={{borderRadius:"10px"}}
           className="dark:hidden "
         />
+        </Link>
+        <Link href="/">
         <Image
           src="/channels4_profile.jpg"
           height="35"
@@ -27,6 +31,7 @@ const font = Poppins({
           alt="Logo"
           className="hidden dark:block"
         />
+        </Link>
         <p className={cn("font-semibold", font.className)}>
           Yaznbook
         </p>
