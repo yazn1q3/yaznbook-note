@@ -8,7 +8,7 @@ import { addDays, startOfTomorrow, differenceInMilliseconds } from 'date-fns';
 
 
 
-const MarketingPage: React.FC = () => {
+const MarketingPage = () => {
   useEffect(() => {
     const showNotification = () => {
       if ('Notification' in window && Notification.permission === 'granted') {
