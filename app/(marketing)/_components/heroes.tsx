@@ -28,6 +28,7 @@ The Ai Powred From Booke Ai,
           <div className="p-4 pb-0">
           Yaznbook AI is an advanced artificial intelligence system developed to assist users in various tasks related to writing, language, and creativity. It is designed to provide intelligent suggestions, generate text, answer questions, and engage in natural language conversations.
 
+Coming Soon...
 
 
           </div>
