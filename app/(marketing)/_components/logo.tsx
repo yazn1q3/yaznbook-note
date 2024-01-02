@@ -12,8 +12,8 @@ const font = Poppins({
       <div className="hidden md:flex items-center gap-x-2">
         <Image
           src="/channels4_profile.jpg"
-          height="40"
-          width="40"
+          height="35"
+          width="35"
 
           alt="Logo"
           style={{borderRadius:"10px"}}
@@ -21,8 +21,8 @@ const font = Poppins({
         />
         <Image
           src="/channels4_profile.jpg"
-          height="40"
-          width="40"
+          height="35"
+          width="35"
           style={{borderRadius:"10px"}}
           alt="Logo"
           className="hidden dark:block"

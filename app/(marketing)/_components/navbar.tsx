@@ -12,10 +12,16 @@ import { cn } from "@/lib/utils";
 
 import { Logo } from "./logo";
 import { useState } from "react";
+import { useMediaQuery } from "usehooks-ts";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverArrow } from "@radix-ui/react-popover";
+import { Group } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export const Navbar = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
   const scrolled = useScrollTop();
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <div className={cn(
@@ -23,15 +29,19 @@ export const Navbar = () => {
       scrolled && "border-b shadow-sm"
     )}>
       <Logo />
+    <div>
+   
+      
+      
+ </div>
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+
         {isLoading && (
           <Spinner />
         )}
         {!isAuthenticated && !isLoading && (
           <>
-          <Button variant="ghost">
-            Join us
-          </Button>
+      
             <SignInButton mode="modal">
               <Button  size="sm">
                 Log in
@@ -57,8 +67,11 @@ export const Navbar = () => {
             />
           </>
         )}
+
+    
         <ModeToggle />
       </div>
+      
     </div>
   )
 }
