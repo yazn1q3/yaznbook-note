@@ -9,36 +9,7 @@ import { addDays, startOfTomorrow, differenceInMilliseconds } from 'date-fns';
 
 
 const MarketingPage = () => {
-  useEffect(() => {
-    const showNotification = () => {
-      if ('Notification' in window && Notification.permission === 'granted') {
-        const notification = new Notification('Yaznbook Tasks days', {
-          icon: '/channels4_profile.jpg',
-          tag: 'yaznbook',
-          body: 'Hi, Make Doucments or Notes to make good day on tasks'
-        });
-      }
-    };
 
-    const scheduleNotification = () => {
-      const now = new Date();
-      const tomorrow = startOfTomorrow();
-      const timeUntilTomorrow = differenceInMilliseconds(tomorrow, now);
-
-      setTimeout(() => {
-        showNotification();
-        scheduleNotification();
-      }, timeUntilTomorrow);
-    };
-
-    if ('Notification' in window && Notification.permission !== 'denied') {
-      Notification.requestPermission().then((permission) => {
-        if (permission === 'granted') {
-          scheduleNotification();
-        }
-      });
-    }
-  }, []);
   
   return (
     <div className="min-h-full flex flex-col" >
