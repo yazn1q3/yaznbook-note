@@ -15,6 +15,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Label } from "@/components/ui/label";
 import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import { useMediaQuery } from "usehooks-ts";
 
 const DocumentsPage = () => {
   const router = useRouter();
@@ -22,7 +23,8 @@ const DocumentsPage = () => {
   const create = useMutation(api.documents.create);
   const [sss, setSsss] = useState('');
   const [greeting, setGreeting] = useState('');
-  
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
 
 
 
@@ -56,8 +58,8 @@ const DocumentsPage = () => {
   return ( 
     <>
     
-    <div className="w-[100%]">
- <div className="flex items-center p-2" >
+    <div className="w-[100%]" >
+ <div className={`${isMobile && "justify-center"} flex items-center  p-2`} >
  <Avatar className="w-[30px] h-[30px] m-2 rounded-[50px]" >
   <AvatarImage src={user?.imageUrl} />
  </Avatar>
