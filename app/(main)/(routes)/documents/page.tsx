@@ -59,7 +59,7 @@ const DocumentsPage = () => {
     <>
     
     <div className="w-[100%]" >
- <div className={`${isMobile && "justify-center"} flex items-center  p-2`} >
+ <div className={`${isMobile && "justify-center"} justify-between flex items-center  p-2`} >
  <Avatar className="w-[30px] h-[30px] m-2 rounded-[50px]" >
   <AvatarImage src={user?.imageUrl} />
  </Avatar>
