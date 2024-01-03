@@ -15,6 +15,7 @@ const DocumentsPage = () => {
   const { user } = useUser();
   const create = useMutation(api.documents.create);
 
+
   const onCreate = () => {
     const promise = create({ title: "Untitled" })
       .then((documentId) => router.push(`/documents/${documentId}`))
@@ -27,7 +28,10 @@ const DocumentsPage = () => {
   };
 
   return ( 
+    <>
+    
     <div className="h-full flex flex-col items-center justify-center space-y-4">
+ 
       <Image
         src="/empty.png"
         height="300"
@@ -49,7 +53,7 @@ const DocumentsPage = () => {
         <PlusCircle className="h-4 w-4 mr-2" />
         Create a Note
       </Button>
-    </div>
+    </div></>
    );
 }
  
